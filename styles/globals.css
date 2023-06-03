@@ -2,8 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'NunitoSansRegular';
+    src: url('../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NunitoSansSemibold';
+    src: url('../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NunitoSansBold';
+    src: url('../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NunitoSansExtraBold';
+    src: url('../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NunitoSansBlack';
+    src: url('../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-Black.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.services-bg {
+  background: linear-gradient(101.08deg, #3F14A5 -6.49%, #5FC2EE 109.89%);
+}
+
+.services-circle {
+  background: linear-gradient(135deg, #E8E8E8 0%, #FFFFFF 100%);
 }
