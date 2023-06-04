@@ -4,36 +4,41 @@
 
 @layer base {
   @font-face {
-    font-family: 'NunitoSansRegular';
-    src: url('../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-Regular.ttf') format('truetype');
+    font-family: "NunitoSansRegular";
+    src: url("../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-Regular.ttf")
+      format("truetype");
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'NunitoSansSemibold';
-    src: url('../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-SemiBold.ttf') format('truetype');
+    font-family: "NunitoSansSemibold";
+    src: url("../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-SemiBold.ttf")
+      format("truetype");
     font-weight: 600;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'NunitoSansBold';
-    src: url('../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-Bold.ttf') format('truetype');
+    font-family: "NunitoSansBold";
+    src: url("../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-Bold.ttf")
+      format("truetype");
     font-weight: 700;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'NunitoSansExtraBold';
-    src: url('../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-ExtraBold.ttf') format('truetype');
+    font-family: "NunitoSansExtraBold";
+    src: url("../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-ExtraBold.ttf")
+      format("truetype");
     font-weight: 800;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'NunitoSansBlack';
-    src: url('../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-Black.ttf') format('truetype');
+    font-family: "NunitoSansBlack";
+    src: url("../public/fonts/Nunito_Sans_7pt/NunitoSans_7pt-Black.ttf")
+      format("truetype");
     font-weight: 800;
     font-style: normal;
   }
@@ -46,9 +51,16 @@
 }
 
 .services-bg {
-  background: linear-gradient(101.08deg, #3F14A5 -6.49%, #5FC2EE 109.89%);
+  background: linear-gradient(101.08deg, #3f14a5 -6.49%, #5fc2ee 109.89%);
 }
 
 .services-circle {
-  background: linear-gradient(135deg, #E8E8E8 0%, #FFFFFF 100%);
+  background: linear-gradient(135deg, #e8e8e8 0%, #ffffff 100%);
+}
+
+.finenex {
+  background: linear-gradient(90deg, #4535b3 -5.74%, #599ddf 91.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
