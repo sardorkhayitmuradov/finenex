@@ -18,9 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
         titleTemplate="FINENEX"
         description="FINENEX e-website"
       />
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

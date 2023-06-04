@@ -81,7 +81,7 @@ module.exports = {
       },
       boxShadow: {
         'services-circle': '-22px 22px 44px rgba(224, 224, 224, 0.2), 22px -22px 44px rgba(224, 224, 224, 0.2), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(224, 224, 224, 0.5)',
-        'shadow-2': '0px 3.4508px 22px rgba(148, 148, 148, 0.14)',
+        'value-card': '0px 4px 13px #F3ECEF',
         'hero-shadow': '0px 4px 4px rgba(0, 0, 0, 0.25)',
         'shadow-button': '0px 0px 1px 3px rgba(20, 140, 236, 1)',
       },
