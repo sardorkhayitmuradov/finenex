@@ -17,6 +17,8 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectCoverflow ,Autoplay} from "swiper";
 
+import img from '../public/images/objective-1-min.svg'
+
 export default function Home() {
   const handleOptionChange = (option: OptionType) => {
     console.log(option);
@@ -129,7 +131,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section></section>
+      <section>
+        <Image src={img} width={60} height={60} alt="for" />
+      </section>
     </main>
   );
 }
