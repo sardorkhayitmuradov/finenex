@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Menu from "../../public/images/menu.svg";
 import Logo from "../../public/images/logo-min.svg";
 
 export default function Header() {
@@ -26,12 +27,12 @@ export default function Header() {
           : "bg-transparent duration-300 py-8"
       } fixed w-full z-10`}
     >
-      <div className="max-w-2lg w-full mx-auto flex items-center justify-between">
+      <div className="max-w-2lg px-6 w-full mx-auto flex items-center justify-between">
         <Link href={"/"}>
           <Image src={Logo} width={182} height={42} alt="logo" />
         </Link>
 
-        <nav className="max-w-[660px] w-full">
+        <nav className="max-w-[660px] w-full max-[1000px]:hidden">
           <ul className="flex items-center w-full justify-between">
             <li>
               <Link
@@ -83,6 +84,9 @@ export default function Header() {
             </li>
           </ul>
         </nav>
+        <div className="active:ring-1 p-1 hidden max-[1000px]:block ring-white ring-offset-2 duration-75 ring-offset-slate-50 dark:ring-offset-white">
+          <Image src={Menu} alt="menu" width={30} height={30} />
+        </div>
       </div>
     </header>
   );

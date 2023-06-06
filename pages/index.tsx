@@ -15,7 +15,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { EffectCoverflow } from "swiper";
+import { EffectCoverflow ,Autoplay} from "swiper";
 
 export default function Home() {
   const handleOptionChange = (option: OptionType) => {
@@ -25,7 +25,7 @@ export default function Home() {
     <main>
       <section className="pt-[203px] pb-[70px] bg-[url('/images/hero-bg-min.svg')] bg-no-repeat bg-center bg-cover">
         <div className="max-w-2lg px-6 w-full mx-auto flex flex-col">
-          <h1 className="text-4lg-extrabold text-center mb-[33px] text-white font-NunitoSansExtraBold">
+          <h1 className="text-4lg-extrabold text-center mb-[33px] text-white font-NunitoSansExtraBold max-[1000px]:text-3xl-extrabold max-[450px]:text-lg-extrabold">
             Discover the Future of Finance with Finenex
           </h1>
           <p className="text-center text-lg-regular font-NunitoSansRegular text-white mb-10">
@@ -41,8 +41,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-[120px]">
-        <div className="max-w-2lg px-6 w-full mx-auto flex flex-col gap-5 max-[450px]:h-[529px] max-[450px]:items-center">
+      <section className="py-[120px] px-6">
+        <div className="max-w-2lg w-full mx-auto flex flex-col gap-5 max-[450px]:h-[529px] max-[450px]:items-center">
           <div className="flex gap-5 items-stretch max-[1000px]:flex-col max-[450px]:hidden">
             <h2 className="text-2lg-extrabold max-w-[340px] w-full text-Charcoal font-NunitoSansExtraBold max-[1000px]:text-center mx-auto">
               Core Values of <br />{" "}
@@ -79,30 +79,55 @@ export default function Home() {
                 );
               })}
           </div>
-
-          <Swiper
-            effect={"coverflow"}
-            direction={"vertical"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={3}
-            draggable={true}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 1,
-              modifier: 5,
-              slideShadows: true,
-            }}
-            pagination={true}
-            modules={[EffectCoverflow]}
-            className="flex flex-col justify-center"
-          >
-           {
-            
-           }
-          </Swiper>
-   -     </div>
+          <div className="hidden max-[450px]:block">
+            <Swiper
+              effect={"creative"}
+              direction={"vertical"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={"auto"}
+              draggable={true}
+              passiveListeners={false}
+              // autoplay={{
+              //   delay: 3000,
+              //   disableOnInteraction: false,
+              // }}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 0,
+                slideShadows: false,
+              }}
+              pagination={true}
+              modules={[EffectCoverflow, Autoplay]}
+              className="h-[500px]"
+            >
+              {values.map((value) => {
+                return (
+                  <SwiperSlide
+                    key={value.id}
+                    className="!h-[300px] !mb-0 !flex !flex-col !justify-center"
+                  >
+                    <div
+                      className={`rounded-10 bg-white w-full p-5 h-full text-base-extrabold flex flex-col justify-between`}
+                    >
+                      <div className="flex items-start justify-between">
+                        <h3 className="text-base-extrabold font-NunitoSansExtraBold text-Gunmetal max-w-[205px] w-full">
+                          {value.title}
+                        </h3>
+                        <Image src={value.image} width={52} height={52} alt={value.image} />
+                      </div>
+                      <p className="text-base-regular text-Gunmetal font-NunitoSansRegular">
+                        {value.text}
+                      </p>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
+        </div>
       </section>
       <section></section>
     </main>

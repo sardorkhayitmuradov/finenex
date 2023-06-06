@@ -12,13 +12,13 @@ export default function Footer() {
   const [email, setEmail] = useState<string>("");
 
   return (
-    <footer className="pt-14 pb-5 border-t border-Sky-Blue">
+    <footer className="pt-14 pb-5 border-t border-Sky-Blue px-6">
       <div className="max-w-xl w-full mx-auto">
-        <div className="flex items-start justify-between flex-wrap">
-          <Link href={"/"}>
+        <div className="flex items-start justify-between flex-wrap max-[1000px]:mb-2 max-[1000px]:justify-center max-[450px]:justify-start">
+          <Link href={"/"} className="max-[1000px]:mr-auto max-[1000px]:mb-11">
             <Image src={FooterLogo} width={267} height={62} alt={FooterLogo} />
           </Link>
-          <div className="max-w-[280px] w-full flex flex-col gap-5">
+          <div className="max-w-[280px] w-full flex flex-col gap-5 max-[1000px]:mb-5 max-[1000px]:ml-auto max-[450px]:mx-0">
             <div className="flex gap-[10px] items-start">
               <Image
                 className="mt-[2px]"
@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="flex items-center gap-10 mb-10">
+            <div className="flex items-center gap-10 mb-10 max-[450px]:justify-between max-[450px]:gap-0 max-[450px]:flex-col max-[450px]:gap-y-5">
               <Link href={'/'} className="text-md-regular text-Gunmetal font-NunitoSansRegular">
                 Products
               </Link>
@@ -59,10 +59,10 @@ export default function Footer() {
                 Development
               </Link>
             </div>
-            <p className="text-2lg-regular text-Gunmetal font-NunitoSansRegular self-end mb-[10px]">
+            <p className="text-2lg-regular text-Gunmetal font-NunitoSansRegular self-end mb-[10px] max-[1000px]:self-center max-[450px]:self-start">
               Subscribe to Our Newsletter
             </p>
-            <div className="self-end rounded-10 border-Gunmetal border pl-5 py-[5px] pr-[10px] flex items-center">
+            <div className="self-end max-[1000px]:self-center rounded-10 border-Gunmetal border pl-5 py-[5px] pr-[10px] flex items-center max-[450px]:self-start">
               <Input
                 placeholder={'Email Address'}
                 className={
