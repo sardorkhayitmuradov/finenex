@@ -72,21 +72,21 @@ const Menu: FC<MenuProps> = ({ isOpen, onClose }) => {
               About
             </Link>
             <Link
-              href={"/"}
+              href={"/blog-news"}
               className="font-NunitoSansBold text-base-bold text-Gunmetal"
               onClick={onClose}
             >
               Blog and News
             </Link>
             <Link
-              href={"/"}
+              href={"/faq-support"}
               className="font-NunitoSansBold text-base-bold text-Gunmetal"
               onClick={onClose}
             >
               FAQ and Support
             </Link>
             <Link
-              href={"/"}
+              href={"https://docs.finenex.net/"}
               className="font-NunitoSansBold text-base-bold text-Gunmetal"
               onClick={onClose}
             >

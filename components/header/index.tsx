@@ -79,7 +79,8 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href={"/developer-center"}
+                  href={"https://docs.finenex.net/"}
+                  target="_blank"
                   className="text-white font-NunitoSansSemibold text-xs-semibold"
                 >
                   Developer Center
