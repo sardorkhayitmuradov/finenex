@@ -1,6 +1,6 @@
 import { ObjectivesModel } from "./interface"
 
-export const services: ObjectivesModel[] = [
+export const objectives: ObjectivesModel[] = [
    {
     id: 1,
     text : "Connecting traditional financial networks with blockchain networks to expand the global financial ecosystem and increase efficiency.",

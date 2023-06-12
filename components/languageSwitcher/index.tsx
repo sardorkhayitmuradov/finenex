@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { OptionType } from "./optionType";
 import { LanguageSwitcherProps } from "./propTypes";
-import switchIcon from "../../public/images/material-symbols_arrow-drop-down-rounded.svg";
-
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   options,
   onChange,
+  switchIcon,
+  type
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<OptionType>(options[0]);
@@ -23,7 +23,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
 
   return (
     <div
-      className="relative cursor-pointer font-NunitoSansRegular text-base-regular text-white"
+      className={`relative cursor-pointer ${type ? "font-NunitoSansBold text-base-bold text-Gunmetal" : "font-NunitoSansRegular text-base-regular text-white"}`}
       onClick={toggleDropdown}
     >
       <div className="flex p-2">
@@ -45,7 +45,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
             .map((option, index) => (
               <div
                 key={index}
-                className="p-2 rounded-5 duration-150 font-NunitoSansRegular border hover:border-white border-white text-center hover:bg-white hover:text-Royal-Blue bg-transparent"
+                className={`p-2 rounded-5 duration-150 ${type ? "font-NunitoSansBold text-base-bold text-Gunmetal hover:border-Gunmetal border-Gunmetal" : "font-NunitoSansRegular hover:text-Royal-Blue hover:border-white border-white"} border text-center hover:bg-white bg-transparent`}
                 onClick={() => handleOptionClick(option)}
               >
                 {option.label}

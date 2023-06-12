@@ -1,0 +1,17 @@
+.menuModalEnter {
+    opacity: 0;
+  }
+  
+  .menuModalEnterActive {
+    opacity: 1;
+    transition: opacity 0.15s ease-in-out;
+  }
+  
+  .menuModalExit {
+    opacity: 1;
+  }
+  
+  .menuModalExitActive {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }

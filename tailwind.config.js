@@ -57,6 +57,7 @@ module.exports = {
       '3lg-extrabold': ['48px', '65px'],// 5
       '3xl-extrabold': ['63px', '75px'],// 5
       '4lg-extrabold': ['90px', '120%'],// 6
+      '5lg-extrabold': ['96px', '131%'],// 6
 
       '3lg-black': ['128px', '175px'],// 6
       '4lg-black': ['180px', '246px']
